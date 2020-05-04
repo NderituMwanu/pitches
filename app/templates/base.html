@@ -30,7 +30,7 @@
                             <a href="{{ url_for('auth.login') }}" class="navbar-item">
                                 Login
                             </a>
-                            <a href="{{ url_for('auth.signUp') }}" class="navbar-item">
+                            <a href="{{ url_for('auth.signup') }}" class="navbar-item">
                                 Sign Up
                             </a>
                             {% endif %}
@@ -47,8 +47,8 @@
 
         <div class="hero-body">
             <div class="container has-text-centered">
-                {% block content %}
-                {% endblock %}
+               {% block content %}
+               {% endblock %}
             </div>
         </div>
     </section>

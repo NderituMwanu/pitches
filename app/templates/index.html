@@ -1,54 +1,10 @@
 {% extends "base.html" %}
 
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale-1">
-    <title>PITCHES</title>
-    <link rel="stylesheet" href="https://maxcdn/bootstrapcdn.com/font-awesome/4.7.0/css/font-awesomr.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
-
-</head>
-
-<body>
-
-
-    <section class="hreo is-primary">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title is-1"> Coding Quotes</h1>
-                <h2 class="subtitle">Liking</h2>
-            </div>
-        </div>
-    </section>
-
-    <div class="columns">
-        <div class="column">
-            <div class="card">
-                <div class="card-content">
-                    <h2 class="title">"this is an actual pitch"</h2>
-                    <h3 class="subtitle">By me</h3>
-                </div>
-                <footer class="card-footer">
-                    <div class="card-footer-item">
-                        <a href="#" class="button-is-success ">
-                            <i class="fa fa-thumbs-o-up"></i>
-                        </a>
-                    </div>
-
-                    <div class="card-footer-item">
-                        <a href="#" class="button-is-danger ">
-                            <i class="fa fa-thumbs-o-up"></i>
-                        </a>
-                    </div>
-
-                </footer>
-            </div>
-        </div>
-    </div>
-</body>
-
-</head>
-
-</html>
+{% block content %}
+<h1 class="title">
+  WELCOME TO PITCHES
+</h1>
+<h2 class="subtitle">
+  Create your Own Pitch Today and see how many votes you get!
+</h2>
+{% endblock %}
