@@ -1,3 +1,3 @@
-export MAIL_USERNAME=<Your Email Address>
-export MAIL_PASSWORD=<Your Email Password>
+export MAIL_USERNAME= 'jisnderi@gmail.com'
+export MAIL_PASSWORD= 'Kenyatta100@#'
 python3.8 manage.py server

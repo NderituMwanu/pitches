@@ -9,70 +9,22 @@
   <meta name="viewport" content="width=device-width,initial-scale-1">
   <title>PITCHES</title>
   
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
-
-  <section class="hreo is-primary">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title is-1"> PAST PITCHES </h1>
-        <h2 class="subtitle">Category:</h2>
+  <h4> Welcome and Thankyou for creating your profile! </h4><br>
+  <div class="content-section">
+    <div class="media">
+      <img src="http://via.placeholder.com/150" alt="" class="img-rounded img-responsive" />
+      <div class="media-body">
+        <h6 class="account-heading"> YOUR USERNAME: {{ current_user.username }} </h6>
+        <p class="text-secondary"> YOUR EMAIL ADDRESS: {{ current_user.email }} </p>
       </div>
     </div>
-  </section>
-  <!-- Cards to display quotes-->
 
-
-
-  <div class="card">
-    <div class="card-content">
-      <p class="title">
-        “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
-      </p>
-      <p class="subtitle">
-        Jeff Atwood
-      </p>
-    </div>
-    <p class="card-footer-item">
-      <a href="#" class="button is-success">
-        <i class="fa fa-thumbs-o-up"></i>
-      </a>
-      <a href="#" class="button is-danger">
-        <i class="fa fa-thumbs-o-down"></i>
-      </a>
-    </p>
   </div>
 
-  <div class="card">
-    <div class="card-content">
-      <p class="title">
-        “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
-      </p>
-      <p class="subtitle">
-        Jeff Atwood
-      </p>
-    </div>
-    <footer class="card-footer">
-      <p class="card-footer-item">
-        <a href="#" class="button is-success">
-          <i class="fa fa-thumbs-o-up"></i>
-        </a>
-        <a href="#" class="button is-danger">
-          <i class="fa fa-thumbs-o-down"></i>
-        </a>
-      </p>
-    </footer>
-  </div>
-
-
-  
 </body>
 
-</head>
-
-</html>
 {% endblock %}
