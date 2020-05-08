@@ -12,7 +12,17 @@
 <body>
     <div class="field">
         <form method="POST" action="">
+            {{ form.hidden_tag() }}
 
+            <div class="select">
+                <select>
+                  <option> Interview Pitch</option>
+                  <option> Pickup Lines </option>
+                  <option> Wise words </option>
+                  <option> Technology  </option>
+                </select>
+                </div>
+                
             <div class="field">
                 <label>Category: </label>
                 {% if form.title.errors %}
