@@ -4,7 +4,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, logout_user, login_required
 from flask_wtf import FlaskForm
 from .forms import PostForm
-from .models import User
+from .models import User, Post
 from . import db
 from flask_mail import Mail, Message
 from itsdangerous import URLSafeTimedSerializer
@@ -77,17 +77,21 @@ def signup_post():
     
     return redirect(url_for('auth.login'))
 
-
-@auth.route("/createpost", methods=['GET','POST'])
+@auth.route("/new_post", methods=['GET', 'POST'])
 @login_required
 def new_post():
+    
     form = PostForm()
+
     if form.validate_on_submit():
-        post = Post(title=form.title.date, content=form.content.data, author=current_user)
+        post = Post(title=form.title.data, content=form.content.data, author=current_user)
+        flash('Your post has been created')
+
+        return redirect(url_for('auth.new_post'))
+
         db.session.add(post)
         db.session.commit()
-        flash('Your post has been created')
-        return redirect(url_for('auth.profile'))
+        
     return render_template('create_post.html', title='New Post', form=form)
 
 
