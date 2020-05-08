@@ -19,7 +19,7 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://ms:New Password@localhost/USER'
 
     db.init_app(app)
-    # mail.init_app(__name__)
+    
 
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'
