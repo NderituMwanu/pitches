@@ -87,7 +87,7 @@ def new_post():
         db.session.add(post)
         db.session.commit()
         flash('Your post has been created')
-        return redirect(url_for('auth.route'))
+        return redirect(url_for('auth.profile'))
     return render_template('create_post.html', title='New Post', form=form)
 
 
