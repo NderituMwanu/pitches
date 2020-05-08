@@ -6,10 +6,10 @@ main = Blueprint('main', __name__)
 
 @main.route('/')
 def index():
-    posts = Post.query.all()
-    return render_template('index.html', posts=posts)
+    return render_template('index.html')
 
 @main.route('/profile')
 @login_required
 def profile():
+    
     return render_template('profile.html', username=current_user.username)
