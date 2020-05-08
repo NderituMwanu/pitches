@@ -13,14 +13,30 @@
 </head>
 
 <body>
-  <h4> Welcome and Thankyou for creating your profile! </h4><br>
+  
+  <h4> Welcome! Below is your Profile Info: </h4><br>
   <div class="content-section">
     <div class="media">
+      <div class="jumbotron">
       <img src="http://via.placeholder.com/150" alt="" class="img-rounded img-responsive" />
-      <div class="media-body">
-        <h6 class="account-heading"> YOUR USERNAME: {{ current_user.username }} </h6>
-        <p class="text-secondary"> YOUR EMAIL ADDRESS: {{ current_user.email }} </p>
+    </div>
+    <div class="columns">
+      <div class ="column">
+
+        <div class="media-body">
+          <h6 class="account-heading"> YOUR USERNAME: {{ current_user.username }} </h6>
+          <p class="text-secondary"> YOUR EMAIL ADDRESS: {{ current_user.email }} </p>
+        </div>
+
+        <div class="columns">
+          <div class ="column">
+            <p>
+              My Pitches: {{ new_post }}
+            </p>
+          </div>
+        </div>
       </div>
+    </div>
     </div>
 
   </div>
